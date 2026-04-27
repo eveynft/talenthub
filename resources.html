@@ -175,17 +175,18 @@
 </head>
 <body>
 
-<!-- ── NAVBAR ── -->
+<!-- ── NAV ── -->
 <nav>
   <div class="nav-inner">
-    <a class="nav-logo" href="index.html">
-      <img src="https://i.postimg.cc/SKgCX0Bm/transferir-(1).jpg" alt="TalentHub">
+    <button class="logo-btn" onclick="window.location.href='index.html'" aria-label="Go to home">
+      <img src="https://i.postimg.cc/SKgCX0Bm/transferir-(1).jpg" alt="TalentHub" style="width:34px; height:34px; border-radius:8px; object-fit:cover; border:1px solid rgba(196,181,253,0.2);">
       <div>
-        <div class="nav-logo-name">TalentHub</div>
-        <div class="nav-logo-sub">Solana & Web3 Jobs</div>
+        <div style="font-family:'Playfair Display',serif; font-weight:600; font-size:1rem; letter-spacing:-0.01em; color:var(--text-primary);">TalentHub</div>
+        <div style="font-size:0.6rem; color:var(--lavender); letter-spacing:0.12em; text-transform:uppercase; opacity:0.65;">Solana & Web3 Jobs</div>
       </div>
-    </a>
-    <div class="nav-links">
+    </button>
+
+    <div style="display:flex; align-items:center; gap:6px; flex-wrap:wrap;">
       <a class="nav-link" href="index.html">Home</a>
       <span class="nav-dot">◆</span>
       <a class="nav-link" href="#jobs">Jobs</a>
@@ -198,15 +199,16 @@
       <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
       <a href="companies.html" class="nav-link">For Companies</a>
       <div style="width:1px; height:18px; background:var(--border); margin:0 10px;"></div>
-      <a href="https://x.com/EveyNFT" target="_blank" class="nav-link nav-icon"><i class="fab fa-x-twitter" style="font-size:0.88rem;"></i></a>
-      <a href="https://t.me/+GdvrpVR62uo0Y2Ex" target="_blank" class="nav-link nav-icon"><i class="fab fa-telegram" style="font-size:0.88rem;"></i></a>
-      <div class="nav-divider"></div>
+      <a href="https://x.com/EveyNFT" target="_blank" class="nav-link" style="padding:8px 10px;"><i class="fab fa-x-twitter" style="font-size:0.88rem;"></i></a>
+      <a href="https://t.me/+GdvrpVR62uo0Y2Ex" target="_blank" class="nav-link" style="padding:8px 10px;"><i class="fab fa-telegram" style="font-size:0.88rem;"></i></a>
+      <div style="width:1px; height:18px; background:var(--border); margin:0 4px;"></div>
       <button onclick="showTipModal()" class="tip-btn">
         <i class="fas fa-mug-hot" style="font-size:0.8rem;"></i> Tip Evey
       </button>
     </div>
   </div>
 </nav>
+
 
 
 <!-- ── HERO ── -->
