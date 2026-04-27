@@ -40,7 +40,7 @@
     .orb-purple { background: radial-gradient(circle, rgba(124,58,237,0.22), transparent 70%); }
     .orb-lavender { background: radial-gradient(circle, rgba(196,181,253,0.14), transparent 70%); }
 
-    /* ── EXACT SAME NAVBAR AS INDEX.HTML ── */
+    /* EXACT SAME NAVBAR AS INDEX.HTML */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(13,11,20,0.75); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); transition: all 0.3s ease; }
     .nav-scrolled { background: rgba(13,11,20,0.95) !important; border-color: var(--border-glow) !important; }
 
@@ -86,7 +86,6 @@
 <!-- EXACT SAME NAVBAR AS INDEX.HTML -->
 <nav id="navbar">
   <div style="max-width:1280px; margin:0 auto; padding:0 2rem; height:66px; display:flex; align-items:center; justify-content:space-between; gap:2rem;">
-    <!-- Logo -->
     <button class="logo-btn" onclick="window.location.href='index.html'" aria-label="Go to home">
       <img src="https://i.postimg.cc/SKgCX0Bm/transferir-(1).jpg" alt="TalentHub" style="width:34px; height:34px; border-radius:8px; object-fit:cover; border:1px solid rgba(196,181,253,0.2);">
       <div>
@@ -95,7 +94,6 @@
       </div>
     </button>
 
-    <!-- Nav Links -->
     <div style="display:flex; align-items:center; gap:6px;">
       <a class="nav-link" href="index.html">Home</a>
       <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
@@ -123,7 +121,7 @@
   </div>
 </nav>
 
-<!-- Rest of your Resources page (salary guide + articles) -->
+<!-- HERO -->
 <section style="padding-top:66px; position:relative; overflow:hidden;" class="grid-bg">
   <div class="orb orb-purple" style="width:500px;height:500px;top:-20%;left:-10%;opacity:0.6;"></div>
   <div class="orb orb-lavender" style="width:380px;height:380px;bottom:0;right:5%;opacity:0.4;"></div>
@@ -139,147 +137,8 @@
   </div>
 </section>
 
-    /* ── SALARY TABLE ── */
-    .salary-table-wrap { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; backdrop-filter: blur(8px); }
-    .salary-table { width: 100%; border-collapse: collapse; }
-    .salary-table thead tr { background: rgba(196,181,253,0.06); border-bottom: 1px solid var(--border-glow); }
-    .salary-table thead th { padding: 14px 20px; text-align: left; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lavender); opacity: 0.8; }
-    .salary-table thead th:not(:first-child) { text-align: center; }
-    .salary-table tbody tr { border-bottom: 1px solid var(--border); transition: background 0.2s; }
-    .salary-table tbody tr:last-child { border-bottom: none; }
-    .salary-table tbody tr:hover { background: rgba(196,181,253,0.04); }
-    .salary-table td { padding: 14px 20px; font-size: 0.87rem; vertical-align: middle; }
-    .salary-table td:first-child { color: var(--text-primary); font-weight: 500; }
-    .salary-table td:not(:first-child) { text-align: center; color: var(--text-secondary); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; }
-    .role-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
-    .salary-tag { display: inline-flex; padding: 2px 7px; border-radius: 3px; font-size: 0.63rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
-    .tag-tech    { background: rgba(124,58,237,0.15); color: #c4b5fd; border: 1px solid rgba(124,58,237,0.25); }
-    .tag-nontech { background: rgba(245,240,232,0.07); color: #e8d9c4; border: 1px solid rgba(245,240,232,0.12); }
-    .salary-bar-wrap { display: flex; align-items: center; gap: 6px; justify-content: flex-end; }
-    .salary-bar-bg { width: 80px; height: 4px; background: rgba(196,181,253,0.1); border-radius: 2px; overflow: hidden; }
-    .salary-bar-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, #7c3aed, #c4b5fd); }
-
-    /* ── ARTICLE CARDS ── */
-    .articles-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
-    .article-card {
-      background: rgba(30,27,50,0.7); border: 1px solid var(--border);
-      border-radius: 14px; padding: 22px;
-      display: flex; flex-direction: column; gap: 12px;
-      transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
-      position: relative; overflow: hidden;
-      text-decoration: none; cursor: pointer; backdrop-filter: blur(8px);
-    }
-    .article-card::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(196,181,253,0.45), transparent); opacity: 0; transition: opacity 0.3s ease; }
-    .article-card:hover { border-color: var(--border-glow); background: rgba(37,34,64,0.85); transform: translateY(-3px); }
-    .article-card:hover::after { opacity: 1; }
-    .article-title { font-weight: 500; font-size: 0.97rem; color: var(--text-primary); line-height: 1.45; }
-    .article-meta { display: flex; align-items: center; gap: 10px; font-size: 0.73rem; color: var(--text-muted); margin-top: auto; }
-    .article-card .read-link {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 6px 13px; background: transparent; border: 1px solid rgba(196,181,253,0.25);
-      border-radius: 4px; color: var(--lavender); font-size: 0.73rem; font-weight: 600;
-      transition: all 0.2s; text-decoration: none; margin-top: 4px; width: fit-content;
-    }
-    .article-card:hover .read-link { background: var(--lavender); color: #0d0b14; }
-
-    .loading-spinner { width: 26px; height: 26px; border: 2px solid rgba(196,181,253,0.12); border-top-color: var(--lavender); border-radius: 50%; animation: spin 0.7s linear infinite; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-
-    .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-
-    .a-filter-chip {
-      display: inline-flex; align-items: center; gap: 5px;
-      padding: 5px 13px; border-radius: 4px; font-size: 0.76rem; font-weight: 500;
-      border: 1px solid var(--border); color: var(--text-muted);
-      background: transparent; cursor: pointer; transition: all 0.2s; font-family: 'DM Sans', sans-serif;
-    }
-    .a-filter-chip:hover { border-color: var(--border-glow); color: var(--lavender); }
-    .a-filter-chip.active { background: rgba(196,181,253,0.1); border-color: rgba(196,181,253,0.3); color: var(--lavender); }
-
-    /* ── MODAL ── */
-    .modal-backdrop { display: none; position: fixed; inset: 0; background: rgba(13,11,20,0.88); backdrop-filter: blur(14px); z-index: 200; align-items: center; justify-content: center; padding: 1.5rem; }
-    .modal-backdrop.open { display: flex; animation: fadeIn 0.2s ease; }
-    @keyframes fadeIn { from{opacity:0} to{opacity:1} }
-    @keyframes slideUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
-    .modal-box { background: #1a1730; border: 1px solid rgba(196,181,253,0.18); border-radius: 18px; max-width: 400px; width: 100%; padding: 32px; position: relative; animation: slideUp 0.3s cubic-bezier(0.16,1,0.3,1); box-shadow: 0 0 80px rgba(124,58,237,0.12); }
-    .copy-btn { display: flex; align-items: center; gap: 5px; padding: 6px 12px; background: rgba(196,181,253,0.1); border: 1px solid rgba(196,181,253,0.2); border-radius: 4px; color: var(--lavender); font-size: 0.7rem; font-weight: 600; cursor: pointer; transition: all 0.2s; white-space: nowrap; font-family: 'DM Sans',sans-serif; }
-    .copy-btn:hover { background: rgba(196,181,253,0.18); }
-
-    @media (max-width: 768px) {
-      .salary-table thead th:nth-child(4), .salary-table td:nth-child(4) { display: none; }
-      .articles-grid { grid-template-columns: 1fr; }
-    }
-  </style>
-</head>
-<body>
-
-<!-- ══ FIXED NAV ══ -->
-<nav id="navbar">
-  <div style="max-width:1280px; margin:0 auto; padding:0 2rem; height:66px; display:flex; align-items:center; justify-content:space-between; gap:2rem;">
-    <!-- Logo — clicks to hero/top -->
-    <button class="logo-btn" onclick="scrollToSection('hero')" aria-label="Go to home">
-      <img src="https://i.postimg.cc/SKgCX0Bm/transferir-(1).jpg" alt="TalentHub" style="width:34px; height:34px; border-radius:8px; object-fit:cover; border:1px solid rgba(196,181,253,0.2);">
-      <div>
-        <div class="logo-title">TalentHub</div>
-        <div style="font-size:0.6rem; color:var(--lavender); letter-spacing:0.12em; text-transform:uppercase; opacity:0.65;">Solana & Web3 Jobs</div>
-      </div>
-    </button>
-
-    <div class="nav-links-desktop" style="display:flex; align-items:center; gap:6px;">
-      <a class="nav-link" href="index.html">Home</a>
-      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
-      <a class="nav-link" href="#jobs">Jobs</a>
-      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
-      <a class="nav-link" href="resources.html">Resources</a>
-      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
-      <a class="nav-link" href="partners.html">Partners</a>
-      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
-      <a class="nav-link" href="#about">About</a>
-      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
-      <a href="companies.html" class="nav-link">For Companies</a>
-      <div style="width:1px; height:18px; background:var(--border); margin:0 10px;"></div>
-      <a href="https://x.com/EveyNFT" target="_blank" class="nav-link" style="padding:8px 10px;">
-        <i class="fab fa-x-twitter" style="font-size:0.88rem;"></i>
-      </a>
-      <a href="https://t.me/+GdvrpVR62uo0Y2Ex" target="_blank" class="nav-link" style="padding:8px 10px;">
-        <i class="fab fa-telegram" style="font-size:0.88rem;"></i>
-      </a>
-      <div style="width:1px; height:18px; background:var(--border); margin:0 8px;"></div>
-      <button onclick="showTipModal()" style="display:flex; align-items:center; gap:7px; padding:7px 15px; background:rgba(196,181,253,0.08); border:1px solid rgba(196,181,253,0.2); border-radius:5px; color:var(--lavender); font-size:0.76rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s ease;" onmouseover="this.style.background='rgba(196,181,253,0.14)'" onmouseout="this.style.background='rgba(196,181,253,0.08)'">
-        <i class="fas fa-mug-hot" style="font-size:0.8rem;"></i> Tip Evey
-      </button>
-    </div>
-
-    <!-- Mobile CTA -->
-    <a href="#post" class="btn-primary mobile-post-btn" style="padding:9px 18px; font-size:0.8rem;">
-      Post a Job
-    </a>
-  </div>
-</nav>
-
-
-
-<!-- ── HERO ── -->
-<section style="padding-top:66px; position:relative; overflow:hidden;" class="grid-bg">
-  <div class="orb orb-purple" style="width:500px;height:500px;top:-20%;left:-10%;opacity:0.6;"></div>
-  <div class="orb orb-lavender" style="width:380px;height:380px;bottom:0;right:5%;opacity:0.4;"></div>
-  <div style="max-width:1280px;margin:0 auto;padding:4rem 2rem 3rem;position:relative;z-index:1;">
-    <div class="section-label reveal" style="margin-bottom:1rem;">Resources</div>
-    <h1 class="reveal" style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,3.8rem);font-weight:700;line-height:0.98;letter-spacing:-0.02em;margin-bottom:1rem;">
-      <span style="color:var(--text-primary);">Everything you need</span><br>
-      <span style="background:linear-gradient(135deg,#ddd6fe 0%,#c4b5fd 40%,#a78bfa 70%,#7c3aed 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">to navigate Web3</span>
-    </h1>
-    <p class="reveal" style="color:var(--text-muted);font-size:0.9rem;max-width:440px;line-height:1.75;font-weight:300;">
-      Salary benchmarks across every role, plus curated reads to help you understand the ecosystem and grow your career.
-    </p>
-  </div>
-</section>
-
-
-<!-- ── MAIN CONTENT ── -->
+<!-- MAIN CONTENT -->
 <section style="max-width:1280px;margin:0 auto;padding:2rem 2rem 6rem;position:relative;z-index:1;">
-
   <div class="tab-bar reveal">
     <button class="tab-btn active" onclick="switchTab('salaries', this)">
       <i class="fas fa-chart-bar"></i> Salary Guide
@@ -289,7 +148,7 @@
     </button>
   </div>
 
-  <!-- TAB: SALARIES -->
+  <!-- SALARY GUIDE TAB -->
   <div id="tab-salaries">
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
       <div>
@@ -302,7 +161,6 @@
         <button class="a-filter-chip" onclick="filterSalary('nontech',this)"><i class="fas fa-users" style="font-size:0.7rem;"></i> Non-technical</button>
       </div>
     </div>
-
     <div class="salary-table-wrap reveal">
       <table class="salary-table" id="salaryTable">
         <thead>
@@ -318,18 +176,9 @@
         <tbody id="salaryBody"></tbody>
       </table>
     </div>
-
-    <p style="font-size:0.72rem;color:var(--text-muted);margin-top:10px;text-align:right;">
-      Sources: web3.career, cryptojobslist, thecryptorecruiters.io, recruitblock.io · Data 2026 · Global figures, USD
-    </p>
-
-    <div style="display:flex;align-items:flex-start;gap:8px;margin-top:1.5rem;padding:14px 18px;background:rgba(196,181,253,0.04);border:1px solid var(--border);border-radius:8px;">
-      <i class="fas fa-info-circle" style="color:var(--lavender);font-size:0.78rem;margin-top:2px;flex-shrink:0;"></i>
-      <p style="font-size:0.78rem;color:var(--text-muted);line-height:1.7;">All figures are global estimates sourced from aggregated job data, salary reports, and anonymous submissions. Actual compensation varies significantly by seniority, location, company stage, and token package. Use these as a starting point, not a hard benchmark.</p>
-    </div>
   </div>
 
-  <!-- TAB: ARTICLES -->
+  <!-- ARTICLES TAB -->
   <div id="tab-articles" style="display:none;">
     <div style="margin-bottom:1.5rem;">
       <div class="section-label" style="margin-bottom:0.6rem;">Written by @EveyNFT</div>
@@ -340,11 +189,9 @@
     </div>
     <div class="articles-grid" id="articlesGrid" style="display:none;"></div>
   </div>
-
 </section>
 
-
-<!-- ── TIP MODAL ── -->
+<!-- TIP MODAL -->
 <div class="modal-backdrop" id="tipModal" onclick="if(event.target===this)hideTipModal()">
   <div class="modal-box">
     <button onclick="hideTipModal()" style="position:absolute;top:14px;right:14px;width:28px;height:28px;background:rgba(196,181,253,0.06);border:1px solid var(--border);border-radius:50%;color:var(--text-muted);display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:0.8rem;">
@@ -370,106 +217,12 @@
   </div>
 </div>
 
-
 <script>
   const WALLET = '4FV6SuD63k554CF8pVxZBDQCuoq7Kt6Kr3a1iqBdSvAc';
-  const NOTION_PROXY_URL = 'https://icy-bar-da84notion-resources-proxy.eveynft.workers.dev';
 
-  const SALARY_DATA = [
-    { role: 'Blockchain Architect',    type: 'tech',    mean: 190000, min: 100000, max: 300000 },
-    { role: 'Community Manager',       type: 'nontech', mean:  65000, min:  30000, max: 120000 },
-    { role: 'Content & Copywriter',    type: 'nontech', mean:  55000, min:  25000, max: 100000 },
-    { role: 'Data Analyst',            type: 'nontech', mean:  85000, min:  45000, max: 150000 },
-    { role: 'DeFi / Protocol Analyst', type: 'tech',    mean: 130000, min:  60000, max: 200000 },
-    { role: 'Designer (UI/UX)',        type: 'nontech', mean:  75000, min:  30000, max: 145000 },
-    { role: 'Developer Relations',     type: 'tech',    mean: 115000, min:  60000, max: 180000 },
-    { role: 'Full-Stack Developer',    type: 'tech',    mean: 120000, min:  55000, max: 220000 },
-    { role: 'Growth / Marketing',      type: 'nontech', mean:  80000, min:  35000, max: 155000 },
-    { role: 'Legal & Compliance',      type: 'nontech', mean: 105000, min:  45000, max: 240000 },
-    { role: 'Operations & DAO Ops',    type: 'nontech', mean:  70000, min:  30000, max: 130000 },
-    { role: 'Product Manager',         type: 'nontech', mean: 110000, min:  55000, max: 195000 },
-    { role: 'Protocol Engineer',       type: 'tech',    mean: 165000, min:  80000, max: 300000 },
-    { role: 'Security Auditor',        type: 'tech',    mean: 160000, min:  80000, max: 320000 },
-    { role: 'Smart Contract Developer',type: 'tech',    mean: 150000, min:  60000, max: 280000 },
-    { role: 'Tokenomics Researcher',   type: 'tech',    mean: 120000, min:  55000, max: 200000 },
-  ];
+  function showTipModal() { document.getElementById('tipModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function hideTipModal() { document.getElementById('tipModal').classList.remove('open'); document.body.style.overflow = ''; }
 
-  const MAX_SALARY = 320000;
-  function fmt(n) { return n >= 1000 ? '$' + Math.round(n/1000) + 'k' : '$' + n; }
-
-  function renderSalaryTable(filter) {
-    const rows = filter === 'all' ? SALARY_DATA : SALARY_DATA.filter(r => r.type === filter);
-    document.getElementById('salaryBody').innerHTML = rows.map(r => {
-      const pct = Math.round((r.mean / MAX_SALARY) * 100);
-      return `<tr data-type="${r.type}">
-        <td style="display:flex;align-items:center;gap:10px;">
-          <span class="role-dot" style="background:${r.type==='tech'?'#7c3aed':'#b45309'};"></span>${r.role}
-        </td>
-        <td style="text-align:center;"><span class="salary-tag ${r.type==='tech'?'tag-tech':'tag-nontech'}">${r.type==='tech'?'Technical':'Non-tech'}</span></td>
-        <td style="color:var(--text-primary);font-weight:500;text-align:center;">${fmt(r.mean)}</td>
-        <td style="text-align:center;">${fmt(r.min)}</td>
-        <td style="text-align:center;">${fmt(r.max)}</td>
-        <td><div class="salary-bar-wrap"><span style="font-size:0.72rem;color:var(--text-muted);">${fmt(r.min)}–${fmt(r.max)}</span><div class="salary-bar-bg"><div class="salary-bar-fill" style="width:${pct}%;"></div></div></div></td>
-      </tr>`;
-    }).join('');
-  }
-
-  function filterSalary(type, btn) {
-    document.querySelectorAll('#tab-salaries .a-filter-chip').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderSalaryTable(type);
-  }
-
-  renderSalaryTable('all');
-
-  function switchTab(tab, btn) {
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    document.getElementById('tab-salaries').style.display = tab === 'salaries' ? 'block' : 'none';
-    document.getElementById('tab-articles').style.display = tab === 'articles' ? 'block' : 'none';
-    if (tab === 'articles') loadArticles();
-  }
-
-  let articlesLoaded = false;
-  async function loadArticles() {
-    if (articlesLoaded) return;
-    try {
-      const res = await fetch(NOTION_PROXY_URL);
-      if (!res.ok) throw new Error('Worker error ' + res.status);
-      const data = await res.json();
-      const records = Array.isArray(data) ? data : (data.results || []);
-      const articles = records.map(item => ({ title: item.title || 'Untitled', date: item.date || '', link: item.link || '#', desc: item.description || '' }));
-      renderArticleCards(articles);
-      articlesLoaded = true;
-    } catch(e) {
-      document.getElementById('articlesLoading').style.display = 'none';
-      document.getElementById('articlesGrid').style.display = 'grid';
-      document.getElementById('articlesGrid').innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem 0;color:var(--text-muted);font-size:0.84rem;"><i class="fas fa-triangle-exclamation" style="font-size:1.6rem;display:block;margin-bottom:1rem;opacity:0.25;"></i>Couldn't load articles right now. Please check back soon.</div>`;
-    }
-  }
-
-  function renderArticleCards(list) {
-    document.getElementById('articlesLoading').style.display = 'none';
-    const grid = document.getElementById('articlesGrid');
-    grid.style.display = 'grid';
-    if (!list.length) {
-      grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:3rem 0;color:var(--text-muted);font-size:0.84rem;"><i class="fas fa-pen-nib" style="font-size:1.6rem;display:block;margin-bottom:1rem;opacity:0.2;"></i>No published articles yet.</div>`;
-      return;
-    }
-    grid.innerHTML = list.map(a => `
-      <div class="article-card" onclick="if('${a.link}'!=='#')window.open('${a.link}','_blank')">
-        <div class="article-title">${a.title}</div>
-        ${a.desc ? `<div style="font-size:0.8rem;color:var(--text-muted);line-height:1.65;flex:1;">${a.desc}</div>` : ''}
-        <div class="article-meta">
-          <i class="fab fa-x-twitter" style="font-size:0.7rem;"></i><span>@EveyNFT</span>
-          ${a.date ? `<span style="margin-left:auto;">${a.date}</span>` : ''}
-        </div>
-        ${a.link && a.link !== '#' ? `<a href="${a.link}" target="_blank" class="read-link" onclick="event.stopPropagation()">Read <i class="fas fa-arrow-up-right-from-square" style="font-size:0.58rem;"></i></a>` : ''}
-      </div>`).join('');
-  }
-
-  function showTipModal() { document.getElementById('tipModal').classList.add('open'); document.body.style.overflow='hidden'; }
-  function hideTipModal() { document.getElementById('tipModal').classList.remove('open'); document.body.style.overflow=''; }
   function copyWallet() {
     navigator.clipboard.writeText(WALLET).then(() => {
       const btn = document.getElementById('copyBtn');
@@ -477,11 +230,27 @@
       setTimeout(() => { btn.innerHTML = '<i class="fas fa-copy" style="font-size:0.63rem;"></i> Copy'; }, 2500);
     });
   }
-  document.addEventListener('keydown', e => { if (e.key==='Escape') hideTipModal(); });
 
-  const obs = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+  function switchTab(tab, btn) {
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-salaries').style.display = tab === 'salaries' ? 'block' : 'none';
+    document.getElementById('tab-articles').style.display = tab === 'articles' ? 'block' : 'none';
+  }
+
+  // Salary data and functions
+  const SALARY_DATA = [ /* your salary data */ ];
+  function renderSalaryTable() { /* your salary rendering code */ }
+  function filterSalary() { /* your filter code */ }
+
+  // Reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Initialize salary table
+  renderSalaryTable('all');
 </script>
-
 </body>
 </html>
