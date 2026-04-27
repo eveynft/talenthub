@@ -182,23 +182,28 @@
         <div class="nav-logo-sub">Solana & Web3 Jobs</div>
       </div>
     </a>
-    <div class="nav-links">
-      <a class="nav-link" href="index.html">Home</a>
-      <span class="nav-sep">◆</span>
-      <a class="nav-link" href="index.html#jobs">Jobs</a>
-      <span class="nav-sep">◆</span>
-      <a class="nav-link active" href="resources.html">Resources</a>
-      <span class="nav-sep">◆</span>
+    <div style="display:flex; align-items:center; gap:6px;">
+      <!-- HOME -->
+      <a class="nav-link" onclick="scrollToSection('hero')" style="cursor:pointer;">Home</a>
+      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
+      <a class="nav-link" href="#jobs">Jobs</a>
+      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
+      <a class="nav-link" href="resources.html">Resources</a>
+      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
       <a class="nav-link" href="partners.html">Partners</a>
-      <span class="nav-sep">◆</span>
-      <a class="nav-link" href="index.html#about">About</a>
-      <span class="nav-sep">◆</span>
-      <a class="nav-link" href="companies.html">For Companies</a>
-      <div class="nav-divider"></div>
-      <a href="https://x.com/EveyNFT" target="_blank" class="nav-link nav-icon"><i class="fab fa-x-twitter" style="font-size:0.88rem;"></i></a>
-      <a href="https://t.me/+GdvrpVR62uo0Y2Ex" target="_blank" class="nav-link nav-icon"><i class="fab fa-telegram" style="font-size:0.88rem;"></i></a>
-      <div class="nav-divider"></div>
-      <button onclick="showTipModal()" class="tip-btn">
+      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
+      <a class="nav-link" href="#about">About</a>
+      <span style="color:var(--border-glow); margin:0 4px; font-size:0.6rem;">◆</span>
+      <a href="companies.html" class="nav-link">For Companies</a>
+      <div style="width:1px; height:18px; background:var(--border); margin:0 10px;"></div>
+      <a href="https://x.com/EveyNFT" target="_blank" class="nav-link" style="padding:8px 10px;">
+        <i class="fab fa-x-twitter" style="font-size:0.88rem;"></i>
+      </a>
+      <a href="https://t.me/+GdvrpVR62uo0Y2Ex" target="_blank" class="nav-link" style="padding:8px 10px;">
+        <i class="fab fa-telegram" style="font-size:0.88rem;"></i>
+      </a>
+      <div style="width:1px; height:18px; background:var(--border); margin:0 8px;"></div>
+      <button onclick="showTipModal()" style="display:flex; align-items:center; gap:7px; padding:7px 15px; background:rgba(196,181,253,0.08); border:1px solid rgba(196,181,253,0.2); border-radius:5px; color:var(--lavender); font-size:0.76rem; font-weight:600; cursor:pointer; font-family:'DM Sans',sans-serif; transition:all 0.2s ease;" onmouseover="this.style.background='rgba(196,181,253,0.14)'" onmouseout="this.style.background='rgba(196,181,253,0.08)'">
         <i class="fas fa-mug-hot" style="font-size:0.8rem;"></i> Tip Evey
       </button>
     </div>
